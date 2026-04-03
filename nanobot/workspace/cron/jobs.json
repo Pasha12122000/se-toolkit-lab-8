@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "0732753e",
+      "name": "LMS Health Check: Call mcp_obs",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "atMs": null,
+        "everyMs": 120000,
+        "expr": null,
+        "tz": null
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "LMS Health Check: Call mcp_obs_logs_error_count with minutes=2. If errors > 0, call mcp_obs_logs_search with query=\"LMS backend error\" and limit=5. If traces show errors, call mcp_obs_traces_list for \"Learning Management Service\" with limit=3 and inspect. Then post a short summary to webchat chat_id bb0a9c0e-dbe0-45f6-94f3-9eaba86cdf2c using mcp_webchat_ui_message with type \"text\". If no errors, say the system looks healthy. If errors found, summarize what's failing.",
+        "deliver": true,
+        "channel": "webchat",
+        "to": "bb0a9c0e-dbe0-45f6-94f3-9eaba86cdf2c"
+      },
+      "state": {
+        "nextRunAtMs": 1775248304925,
+        "lastRunAtMs": 1775248155724,
+        "lastStatus": "ok",
+        "lastError": null,
+        "runHistory": [
+          {
+            "runAtMs": 1775246801190,
+            "status": "ok",
+            "durationMs": 42305,
+            "error": null
+          },
+          {
+            "runAtMs": 1775246963496,
+            "status": "ok",
+            "durationMs": 28479,
+            "error": null
+          },
+          {
+            "runAtMs": 1775247111977,
+            "status": "ok",
+            "durationMs": 30433,
+            "error": null
+          },
+          {
+            "runAtMs": 1775247262412,
+            "status": "ok",
+            "durationMs": 25101,
+            "error": null
+          },
+          {
+            "runAtMs": 1775247429169,
+            "status": "ok",
+            "durationMs": 21178,
+            "error": null
+          },
+          {
+            "runAtMs": 1775247570388,
+            "status": "ok",
+            "durationMs": 16751,
+            "error": null
+          },
+          {
+            "runAtMs": 1775247707190,
+            "status": "ok",
+            "durationMs": 17367,
+            "error": null
+          },
+          {
+            "runAtMs": 1775247844599,
+            "status": "ok",
+            "durationMs": 25454,
+            "error": null
+          },
+          {
+            "runAtMs": 1775247990121,
+            "status": "ok",
+            "durationMs": 45528,
+            "error": null
+          },
+          {
+            "runAtMs": 1775248155724,
+            "status": "ok",
+            "durationMs": 29201,
+            "error": null
+          }
+        ]
+      },
+      "createdAtMs": 1775246681189,
+      "updatedAtMs": 1775248184925,
+      "deleteAfterRun": false
+    }
+  ]
+}
